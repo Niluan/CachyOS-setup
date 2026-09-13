@@ -39,7 +39,7 @@ cachyos-setup/
 | Gaming | Steam, Discord |
 | 3D print & CAD | OrcaSlicer, FreeCAD |
 | Lyd & video | PipeWire (+pulse/alsa/jack), WirePlumber, VLC, DVD/codec-pakker |
-| Stream Deck | OpenDeck (styres med **PipeWire Audio Control**-pluginnet) |
+| Stream Deck | OpenDeck |
 | Musik | Spotify (spotify-launcher) |
 | Udvikling | Visual Studio Code |
 | Sikkerhed | Bitwarden |
