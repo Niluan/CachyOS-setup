@@ -5,7 +5,7 @@ Personligt install-script til at genopsætte min CachyOS-arbejds-PC (KDE Plasma)
 ## Brug
 
 ```bash
-git clone https://github.com/Niluan/cachyos-setup.git
+git clone https://github.com/DIT-BRUGERNAVN/cachyos-setup.git
 cd cachyos-setup
 chmod +x setup.sh
 ./setup.sh
@@ -23,6 +23,9 @@ cachyos-setup/
 │   │   └── 50-virtual-sinks.conf     # De 4 virtuelle lydkanaler
 │   └── udev/
 │       └── 99-keychron.rules         # Tastatur/mus-adgang til Keychron Launcher
+├── addons/
+│   └── printers/
+│       └── brother-mfc-j625dw.sh     # Printer-driver, selvstændigt script
 └── README.md
 ```
 
@@ -39,7 +42,7 @@ cachyos-setup/
 | Gaming | Steam, Discord |
 | 3D print & CAD | OrcaSlicer, FreeCAD |
 | Lyd & video | PipeWire (+pulse/alsa/jack), WirePlumber, VLC, DVD/codec-pakker |
-| Stream Deck | OpenDeck |
+| Stream Deck | OpenDeck (styres med **PipeWire Audio Control**-pluginnet) |
 | Musik | Spotify (spotify-launcher) |
 | Udvikling | Visual Studio Code |
 | Sikkerhed | Bitwarden |
@@ -69,6 +72,28 @@ Disse kan ikke automatiseres sikkert (afhænger af hardware-model, GUI-interakti
 ## Lydkanaler (PipeWire)
 
 `configs/pipewire/50-virtual-sinks.conf` opretter 4 virtuelle sinks (System, Musik, Spil, Kommunikation) via `libpipewire-module-loopback`, som automatisk ruter til standard-outputenheden. De styres direkte fra Stream Deck via **PipeWire Audio Control**-pluginnet i OpenDeck, eller manuelt via KDE's indbyggede lyd-widget i systembakken (Playback-fanen).
+
+## Printer-addons (`addons/printers/`)
+
+Printer-drivere ligger **uden for** `setup.sh` som selvstændige scripts, så du nemt kan tilføje, redigere eller fjerne dem uden at røre hovedscriptet.
+
+**Sådan fungerer det:**
+- `setup.sh` scanner `addons/printers/` for `.sh`-filer under kørsel.
+- Er der **ingen filer**, springes trinnet automatisk over.
+- Er der **én fil**, spørges du kun om du vil installere den.
+- Er der **flere filer**, får du en nummereret liste at vælge fra.
+
+**Sådan tilføjer du en ny printer:**
+1. Kopiér `addons/printers/brother-mfc-j625dw.sh` som skabelon.
+2. Navngiv den fx `addons/printers/hp-envy-6420.sh` (navnet uden `.sh` er det, der vises i menuen).
+3. Ret pakkenavn(e) og evt. `brsaneconfig4`-linje til den nye printers model.
+
+**Sådan fjerner du en printer:** slet blot filen fra mappen.
+
+**Sådan kører du en enkelt printer-addon isoleret** (uden hele `setup.sh`):
+```bash
+bash addons/printers/brother-mfc-j625dw.sh
+```
 
 ## Keychron-enheder
 
