@@ -37,6 +37,42 @@ echo "== Print & scan =="
 sudo pacman -S --needed --noconfirm cups print-manager system-config-printer sane simple-scan
 sudo systemctl enable --now cups.socket
 
+echo "== Printer-drivere (addons) =="
+PRINTER_ADDON_DIR="$SCRIPT_DIR/addons/printers"
+if [ -d "$PRINTER_ADDON_DIR" ]; then
+    mapfile -t PRINTER_ADDONS < <(find "$PRINTER_ADDON_DIR" -maxdepth 1 -type f -name "*.sh" | sort)
+else
+    PRINTER_ADDONS=()
+fi
+
+if [ "${#PRINTER_ADDONS[@]}" -gt 0 ]; then
+    read -rp "Vil du installere en printer-driver fra addons/printers/? [y/N] " INSTALL_PRINTER
+    if [[ "$INSTALL_PRINTER" =~ ^[Yy]$ ]]; then
+        if [ "${#PRINTER_ADDONS[@]}" -eq 1 ]; then
+            echo "Installerer: $(basename "${PRINTER_ADDONS[0]}" .sh)"
+            bash "${PRINTER_ADDONS[0]}"
+        else
+            echo "Flere printer-addons fundet i addons/printers/:"
+            PRINTER_ADDON_NAMES=()
+            for f in "${PRINTER_ADDONS[@]}"; do
+                PRINTER_ADDON_NAMES+=("$(basename "$f" .sh)")
+            done
+            PS3="Vælg en printer (nummer): "
+            select CHOSEN in "${PRINTER_ADDON_NAMES[@]}" "Spring over"; do
+                if [ -n "$REPLY" ] && [ "$REPLY" -ge 1 ] 2>/dev/null && [ "$REPLY" -le "${#PRINTER_ADDONS[@]}" ] 2>/dev/null; then
+                    bash "${PRINTER_ADDONS[$((REPLY-1))]}"
+                    break
+                else
+                    echo "Springer printer-installation over."
+                    break
+                fi
+            done
+        fi
+    fi
+else
+    echo "Ingen printer-addons fundet i addons/printers/ – springer over."
+fi
+
 echo "== Grafik & billedredigering =="
 sudo pacman -S --needed --noconfirm krita
 sudo pacman -S --needed --noconfirm libmpv libraw
