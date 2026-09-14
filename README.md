@@ -5,7 +5,7 @@ Personligt install-script til at genopsætte min CachyOS-arbejds-PC (KDE Plasma)
 ## Brug
 
 ```bash
-git clone https://github.com/DIT-BRUGERNAVN/cachyos-setup.git
+git clone https://github.com/Niluan/cachyos-setup.git
 cd cachyos-setup
 chmod +x setup.sh
 ./setup.sh
