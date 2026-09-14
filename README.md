@@ -22,10 +22,12 @@ cachyos-setup/
 │   ├── pipewire/
 │   │   └── 50-virtual-sinks.conf     # De 4 virtuelle lydkanaler
 │   └── udev/
-│       └── 99-keychron.rules         # Tastatur/mus-adgang til Keychron Launcher
+│       └── 99-keychron.rules         # Bruges af addons/peripherals/keychron.sh
 ├── addons/
-│   └── printers/
-│       └── brother-mfc-j625dw.sh     # Printer-driver, selvstændigt script
+│   ├── printers/
+│   │   └── brother-mfc-j625dw.sh     # Printer-driver, selvstændigt script
+│   └── peripherals/
+│       └── keychron.sh               # Keychron K17 Max + M6 8K
 └── README.md
 ```
 
@@ -73,28 +75,36 @@ Disse kan ikke automatiseres sikkert (afhænger af hardware-model, GUI-interakti
 
 `configs/pipewire/50-virtual-sinks.conf` opretter 4 virtuelle sinks (System, Musik, Spil, Kommunikation) via `libpipewire-module-loopback`, som automatisk ruter til standard-outputenheden. De styres direkte fra Stream Deck via **PipeWire Audio Control**-pluginnet i OpenDeck, eller manuelt via KDE's indbyggede lyd-widget i systembakken (Playback-fanen).
 
-## Printer-addons (`addons/printers/`)
+## Addon-systemet (`addons/`)
 
-Printer-drivere ligger **uden for** `setup.sh` som selvstændige scripts, så du nemt kan tilføje, redigere eller fjerne dem uden at røre hovedscriptet.
+Alt der er **hardware-specifikt eller personligt** (printere, tastatur/mus m.m.) ligger **uden for** `setup.sh` som selvstændige scripts i undermapper til `addons/`. Det gør det nemt at tilføje, redigere eller fjerne enkeltdele uden at røre hovedscriptet.
 
 **Sådan fungerer det:**
-- `setup.sh` scanner `addons/printers/` for `.sh`-filer under kørsel.
+- `setup.sh` bruger én genbrugelig funktion (`run_addon_menu`) til at scanne en addon-mappe for `.sh`-filer.
 - Er der **ingen filer**, springes trinnet automatisk over.
 - Er der **én fil**, spørges du kun om du vil installere den.
 - Er der **flere filer**, får du en nummereret liste at vælge fra.
 
-**Sådan tilføjer du en ny printer:**
-1. Kopiér `addons/printers/brother-mfc-j625dw.sh` som skabelon.
-2. Navngiv den fx `addons/printers/hp-envy-6420.sh` (navnet uden `.sh` er det, der vises i menuen).
-3. Ret pakkenavn(e) og evt. `brsaneconfig4`-linje til den nye printers model.
+**Nuværende addon-kategorier:**
 
-**Sådan fjerner du en printer:** slet blot filen fra mappen.
+| Mappe | Indhold |
+|---|---|
+| `addons/printers/` | Printer-/scannerdrivere (fx `brother-mfc-j625dw.sh`) |
+| `addons/peripherals/` | Tastatur/mus/andre HID-enheder (fx `keychron.sh`) |
 
-**Sådan kører du en enkelt printer-addon isoleret** (uden hele `setup.sh`):
+**Sådan tilføjer du en ny addon:**
+1. Kopiér en eksisterende fil i den relevante mappe som skabelon (eller opret en ny mappe under `addons/`, hvis det er en helt ny kategori — husk i så fald at tilføje et `run_addon_menu`-kald for den i `setup.sh`).
+2. Giv den nye fil et beskrivende navn — navnet uden `.sh` er det, der vises i menuen.
+3. Tilpas indholdet (pakkenavne, IP-adresser, udev-regler osv.) til den nye enhed.
+
+**Sådan fjerner du en addon:** slet blot filen fra mappen.
+
+**Sådan kører du en enkelt addon isoleret** (uden hele `setup.sh`):
 ```bash
 bash addons/printers/brother-mfc-j625dw.sh
+bash addons/peripherals/keychron.sh
 ```
 
 ## Keychron-enheder
 
-`configs/udev/99-keychron.rules` giver browseren adgang til at læse/skrive til Keychron-enheder via WebHID (vendor ID `3434`), som ellers er blokeret som standard på Linux. Dækker både K17 Max (tastatur) og M6 8K (mus), tilsluttet enten via kabel eller 2.4GHz-dongle.
+Konfigureres via **addons/peripherals/keychron.sh**, som installerer `configs/udev/99-keychron.rules` — en udev-regel, der giver browseren adgang til at læse/skrive til Keychron-enheder via WebHID (vendor ID `3434`), som ellers er blokeret som standard på Linux. Dækker både K17 Max (tastatur) og M6 8K (mus), tilsluttet enten via kabel eller 2.4GHz-dongle. Selve konfigurationen (taster, DPI, polling rate) sker via [launcher.keychron.com](https://launcher.keychron.com) i Chromium.
