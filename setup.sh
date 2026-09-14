@@ -5,6 +5,51 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_DIR="$SCRIPT_DIR/configs"
 
+# Genbrugelig funktion: scanner en addon-mappe for .sh-filer, spørger brugeren,
+# og lader dig vælge mellem flere, hvis der ligger mere end én.
+# Brug: run_addon_menu "<mappe>" "<spørgetekst>"
+run_addon_menu() {
+    local addon_dir="$1"
+    local prompt_text="$2"
+    local addons=()
+
+    if [ -d "$addon_dir" ]; then
+        mapfile -t addons < <(find "$addon_dir" -maxdepth 1 -type f -name "*.sh" | sort)
+    fi
+
+    if [ "${#addons[@]}" -eq 0 ]; then
+        echo "Ingen addons fundet i $addon_dir – springer over."
+        return
+    fi
+
+    read -rp "$prompt_text [y/N] " ANSWER
+    if [[ ! "$ANSWER" =~ ^[Yy]$ ]]; then
+        return
+    fi
+
+    if [ "${#addons[@]}" -eq 1 ]; then
+        echo "Installerer: $(basename "${addons[0]}" .sh)"
+        bash "${addons[0]}"
+        return
+    fi
+
+    echo "Flere addons fundet i $addon_dir:"
+    local names=()
+    for f in "${addons[@]}"; do
+        names+=("$(basename "$f" .sh)")
+    done
+
+    PS3="Vælg (nummer): "
+    select CHOICE in "${names[@]}" "Spring over"; do
+        if [ -n "$REPLY" ] && [ "$REPLY" -ge 1 ] 2>/dev/null && [ "$REPLY" -le "${#addons[@]}" ] 2>/dev/null; then
+            bash "${addons[$((REPLY-1))]}"
+        else
+            echo "Springer over."
+        fi
+        break
+    done
+}
+
 echo "== Opdaterer system =="
 sudo pacman -Syu --noconfirm
 
@@ -38,40 +83,7 @@ sudo pacman -S --needed --noconfirm cups print-manager system-config-printer san
 sudo systemctl enable --now cups.socket
 
 echo "== Printer-drivere (addons) =="
-PRINTER_ADDON_DIR="$SCRIPT_DIR/addons/printers"
-if [ -d "$PRINTER_ADDON_DIR" ]; then
-    mapfile -t PRINTER_ADDONS < <(find "$PRINTER_ADDON_DIR" -maxdepth 1 -type f -name "*.sh" | sort)
-else
-    PRINTER_ADDONS=()
-fi
-
-if [ "${#PRINTER_ADDONS[@]}" -gt 0 ]; then
-    read -rp "Vil du installere en printer-driver fra addons/printers/? [y/N] " INSTALL_PRINTER
-    if [[ "$INSTALL_PRINTER" =~ ^[Yy]$ ]]; then
-        if [ "${#PRINTER_ADDONS[@]}" -eq 1 ]; then
-            echo "Installerer: $(basename "${PRINTER_ADDONS[0]}" .sh)"
-            bash "${PRINTER_ADDONS[0]}"
-        else
-            echo "Flere printer-addons fundet i addons/printers/:"
-            PRINTER_ADDON_NAMES=()
-            for f in "${PRINTER_ADDONS[@]}"; do
-                PRINTER_ADDON_NAMES+=("$(basename "$f" .sh)")
-            done
-            PS3="Vælg en printer (nummer): "
-            select CHOSEN in "${PRINTER_ADDON_NAMES[@]}" "Spring over"; do
-                if [ -n "$REPLY" ] && [ "$REPLY" -ge 1 ] 2>/dev/null && [ "$REPLY" -le "${#PRINTER_ADDONS[@]}" ] 2>/dev/null; then
-                    bash "${PRINTER_ADDONS[$((REPLY-1))]}"
-                    break
-                else
-                    echo "Springer printer-installation over."
-                    break
-                fi
-            done
-        fi
-    fi
-else
-    echo "Ingen printer-addons fundet i addons/printers/ – springer over."
-fi
+run_addon_menu "$SCRIPT_DIR/addons/printers" "Vil du installere en printer-driver fra addons/printers/?"
 
 echo "== Grafik & billedredigering =="
 sudo pacman -S --needed --noconfirm krita
@@ -106,10 +118,8 @@ paru -S --needed --noconfirm opendeck-bin
 sudo udevadm control --reload-rules && sudo udevadm trigger
 sudo usermod -aG input "$USER"
 
-echo "== Keychron-tastatur/mus (udev-regel til Keychron Launcher) =="
-sudo cp "$CONFIG_DIR/udev/99-keychron.rules" /etc/udev/rules.d/
-sudo udevadm control --reload-rules
-sudo udevadm trigger
+echo "== Perifere enheder (addons) =="
+run_addon_menu "$SCRIPT_DIR/addons/peripherals" "Vil du sætte perifere enheder op fra addons/peripherals/?"
 
 echo "== Musik, udvikling & sikkerhed =="
 sudo pacman -S --needed --noconfirm spotify-launcher
