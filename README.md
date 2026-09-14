@@ -61,7 +61,6 @@ Disse kan ikke automatiseres sikkert (afhænger af hardware-model, GUI-interakti
 - [ ] **Print & scan**: tilføj din printer via `print-manager` i systembakken.
 - [ ] **Keychron K17 Max & M6 8K**: tilslut med **kabel** og åbn [launcher.keychron.com](https://launcher.keychron.com) i Chromium for at konfigurere taster/DPI/polling rate. Firefox understøttes ikke (mangler WebHID).
 - [ ] **Bitwarden**: log ind og synkroniser dit hvælv.
-- [ ] **LibreOffice Draw**: bruges til PDF-redigering — ingen separat installation nødvendig.
 
 ## Noter og forbehold
 
