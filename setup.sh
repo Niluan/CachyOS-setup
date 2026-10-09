@@ -107,8 +107,18 @@ sudo pacman -S --needed --noconfirm pipewire pipewire-pulse pipewire-alsa pipewi
 paru -S --needed --noconfirm libdvdcss
 
 echo "== Opretter virtuelle lydkanaler (System, Musik, Spil, Kommunikation) =="
-mkdir -p ~/.config/pipewire/pipewire.conf.d
-cp "$CONFIG_DIR/pipewire/50-virtual-sinks.conf" ~/.config/pipewire/pipewire.conf.d/
+install -Dm644 "$CONFIG_DIR/pipewire/50-virtual-sinks.conf" \
+    ~/.config/pipewire/pipewire.conf.d/50-virtual-sinks.conf
+
+echo "== Lydstyrke-script til Stream Deck (~/.local/bin/lydstyrke.sh) =="
+install -Dm755 "$CONFIG_DIR/scripts/lydstyrke.sh" ~/.local/bin/lydstyrke.sh
+
+echo "== Stream Deck-ikoner (~/.config/opendeck/ikoner) =="
+mkdir -p ~/.config/opendeck/ikoner
+cp "$CONFIG_DIR/streamdeck/"*.png ~/.config/opendeck/ikoner/
+
+echo "== Lyd-hardware (addons) =="
+run_addon_menu "$SCRIPT_DIR/addons/audio" "Vil du sætte lyd-hardware op fra addons/audio/ (højtalere/headset-skift)?"
 
 echo "== Skærmdeling/portals (Discord m.fl. under Wayland) =="
 sudo pacman -S --needed --noconfirm xdg-desktop-portal-kde
@@ -117,6 +127,17 @@ echo "== Stream Deck (OpenDeck) =="
 paru -S --needed --noconfirm opendeck-bin
 sudo udevadm control --reload-rules && sudo udevadm trigger
 sudo usermod -aG input "$USER"
+
+if [ -d "$CONFIG_DIR/opendeck/profiles" ]; then
+    echo "== Gendanner OpenDeck-profil (configs/opendeck) =="
+    mkdir -p ~/.config/opendeck
+    cp -rn "$CONFIG_DIR/opendeck/profiles" ~/.config/opendeck/
+    if [ -d "$CONFIG_DIR/opendeck/images" ]; then
+        cp -rn "$CONFIG_DIR/opendeck/images" ~/.config/opendeck/
+    fi
+else
+    echo "   (Ingen gemt OpenDeck-profil i configs/opendeck – knapperne sættes op manuelt)"
+fi
 
 echo "== Perifere enheder (addons) =="
 run_addon_menu "$SCRIPT_DIR/addons/peripherals" "Vil du sætte perifere enheder op fra addons/peripherals/?"
