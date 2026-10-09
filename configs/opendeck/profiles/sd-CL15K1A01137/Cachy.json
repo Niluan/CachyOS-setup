@@ -1,0 +1,1770 @@
+{
+  "infobars": [],
+  "keys": [
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.0.0",
+      "current_state": 0,
+      "settings": {
+        "down": "/home/niluan/.local/bin/lydstyrke.sh master op",
+        "show": false
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/chevron-op-groen.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.1.0",
+      "current_state": 0,
+      "settings": {
+        "down": "/home/niluan/.local/bin/lydstyrke.sh OSSink op",
+        "show": false
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/chevron-op-groen.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.2.0",
+      "current_state": 0,
+      "settings": {
+        "down": "/home/niluan/.local/bin/lydstyrke.sh MusicSink op",
+        "show": false
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/chevron-op-groen.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.3.0",
+      "current_state": 0,
+      "settings": {
+        "down": "/home/niluan/.local/bin/lydstyrke.sh GameSink op",
+        "show": false
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/chevron-op-groen.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.4.0",
+      "current_state": 0,
+      "settings": {
+        "down": "/home/niluan/.local/bin/lydstyrke.sh CommsSink op",
+        "show": false
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/chevron-op-groen.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.5.0",
+      "current_state": 0,
+      "settings": {
+        "down": "/home/niluan/.local/bin/lydstyrke.sh mic op",
+        "show": false
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/chevron-op-groen.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    null,
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/me.amankhanna.oasystem.sdPlugin/icon.png",
+        "name": "CPU",
+        "plugin": "me.amankhanna.oasystem.sdPlugin",
+        "property_inspector": "",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/me.amankhanna.oasystem.sdPlugin/icon.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "0%",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Displays average CPU utilisation",
+        "uuid": "me.amankhanna.oasystem.cpu",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.7.0",
+      "current_state": 0,
+      "settings": {},
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "4%",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": {
+          "background": "",
+          "icon": "",
+          "layout": "$B1",
+          "stack_color": "",
+          "trigger_description": {
+            "long_touch": "",
+            "push": "Toggle mute",
+            "rotate": "Adjust volume",
+            "touch": "Toggle mute"
+          }
+        },
+        "icon": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/volume-up.png",
+        "name": "Master Volume",
+        "plugin": "com.sfgrimes.pipewire-audio.sdPlugin",
+        "property_inspector": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/propertyInspector/encoderSettings.html",
+        "states": [
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/volume-up.png",
+            "image_scale": 100,
+            "name": "Unmuted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          },
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/mute-toggle.png",
+            "image_scale": 100,
+            "name": "Muted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Increase or decrease master volume",
+        "uuid": "com.sfgrimes.pipewire-audio.volume",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.8.0",
+      "current_state": 0,
+      "settings": {
+        "customName": "Master",
+        "direction": "mute",
+        "showBar": false,
+        "showName": true,
+        "showPercent": true,
+        "volumeStep": 5
+      },
+      "states": [
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 100,
+          "name": "Unmuted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "Master",
+          "underline": false
+        },
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "1.svg",
+          "image_scale": 100,
+          "name": "Muted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "Master",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": {
+          "background": "",
+          "icon": "",
+          "layout": "$B1",
+          "stack_color": "",
+          "trigger_description": {
+            "long_touch": "",
+            "push": "Toggle output mute",
+            "rotate": "Adjust output volume",
+            "touch": "Toggle output mute"
+          }
+        },
+        "icon": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-volume-up.png",
+        "name": "Output Volume",
+        "plugin": "com.sfgrimes.pipewire-audio.sdPlugin",
+        "property_inspector": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/propertyInspector/outputSettings.html",
+        "states": [
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-volume-up.png",
+            "image_scale": 100,
+            "name": "Unmuted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          },
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-mute.png",
+            "image_scale": 100,
+            "name": "Muted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Increase or decrease output device volume",
+        "uuid": "com.sfgrimes.pipewire-audio.outputvolume",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.9.0",
+      "current_state": 0,
+      "settings": {
+        "customName": "",
+        "direction": "mute",
+        "outputName": "OSSink",
+        "showBar": false,
+        "showName": true,
+        "showPercent": true,
+        "volumeStep": 5
+      },
+      "states": [
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 100,
+          "name": "Unmuted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "System",
+          "underline": false
+        },
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "1.svg",
+          "image_scale": 100,
+          "name": "Muted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "System",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": {
+          "background": "",
+          "icon": "",
+          "layout": "$B1",
+          "stack_color": "",
+          "trigger_description": {
+            "long_touch": "",
+            "push": "Toggle output mute",
+            "rotate": "Adjust output volume",
+            "touch": "Toggle output mute"
+          }
+        },
+        "icon": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-volume-up.png",
+        "name": "Output Volume",
+        "plugin": "com.sfgrimes.pipewire-audio.sdPlugin",
+        "property_inspector": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/propertyInspector/outputSettings.html",
+        "states": [
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-volume-up.png",
+            "image_scale": 100,
+            "name": "Unmuted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          },
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-mute.png",
+            "image_scale": 100,
+            "name": "Muted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Increase or decrease output device volume",
+        "uuid": "com.sfgrimes.pipewire-audio.outputvolume",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.10.0",
+      "current_state": 0,
+      "settings": {
+        "customName": "",
+        "direction": "mute",
+        "outputName": "MusicSink",
+        "showBar": false,
+        "showName": true,
+        "showPercent": true,
+        "volumeStep": 5
+      },
+      "states": [
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 100,
+          "name": "Unmuted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "Musik",
+          "underline": false
+        },
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "1.svg",
+          "image_scale": 100,
+          "name": "Muted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "Musik",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": {
+          "background": "",
+          "icon": "",
+          "layout": "$B1",
+          "stack_color": "",
+          "trigger_description": {
+            "long_touch": "",
+            "push": "Toggle output mute",
+            "rotate": "Adjust output volume",
+            "touch": "Toggle output mute"
+          }
+        },
+        "icon": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-volume-up.png",
+        "name": "Output Volume",
+        "plugin": "com.sfgrimes.pipewire-audio.sdPlugin",
+        "property_inspector": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/propertyInspector/outputSettings.html",
+        "states": [
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-volume-up.png",
+            "image_scale": 100,
+            "name": "Unmuted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          },
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-mute.png",
+            "image_scale": 100,
+            "name": "Muted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Increase or decrease output device volume",
+        "uuid": "com.sfgrimes.pipewire-audio.outputvolume",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.11.0",
+      "current_state": 0,
+      "settings": {
+        "customName": "",
+        "direction": "mute",
+        "outputName": "GameSink",
+        "showBar": false,
+        "showName": true,
+        "showPercent": true,
+        "volumeStep": 5
+      },
+      "states": [
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 100,
+          "name": "Unmuted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "Spil",
+          "underline": false
+        },
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "1.svg",
+          "image_scale": 100,
+          "name": "Muted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "Spil",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": {
+          "background": "",
+          "icon": "",
+          "layout": "$B1",
+          "stack_color": "",
+          "trigger_description": {
+            "long_touch": "",
+            "push": "Toggle output mute",
+            "rotate": "Adjust output volume",
+            "touch": "Toggle output mute"
+          }
+        },
+        "icon": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-volume-up.png",
+        "name": "Output Volume",
+        "plugin": "com.sfgrimes.pipewire-audio.sdPlugin",
+        "property_inspector": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/propertyInspector/outputSettings.html",
+        "states": [
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-volume-up.png",
+            "image_scale": 100,
+            "name": "Unmuted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          },
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-mute.png",
+            "image_scale": 100,
+            "name": "Muted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Increase or decrease output device volume",
+        "uuid": "com.sfgrimes.pipewire-audio.outputvolume",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.12.0",
+      "current_state": 0,
+      "settings": {
+        "customName": "Com.",
+        "direction": "mute",
+        "outputName": "CommsSink",
+        "showBar": false,
+        "showName": true,
+        "showPercent": true,
+        "volumeStep": 5
+      },
+      "states": [
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 100,
+          "name": "Unmuted",
+          "show": true,
+          "size": 14,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "Com.",
+          "underline": false
+        },
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "1.svg",
+          "image_scale": 100,
+          "name": "Muted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "Com.",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": {
+          "background": "",
+          "icon": "",
+          "layout": "$B1",
+          "stack_color": "",
+          "trigger_description": {
+            "long_touch": "",
+            "push": "Toggle mic mute",
+            "rotate": "Adjust mic volume",
+            "touch": "Toggle mic mute"
+          }
+        },
+        "icon": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/mic-up.png",
+        "name": "Mic Volume",
+        "plugin": "com.sfgrimes.pipewire-audio.sdPlugin",
+        "property_inspector": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/propertyInspector/encoderSettings.html",
+        "states": [
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/mic-up.png",
+            "image_scale": 100,
+            "name": "Unmuted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          },
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/mic-mute.png",
+            "image_scale": 100,
+            "name": "Muted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Increase or decrease microphone volume",
+        "uuid": "com.sfgrimes.pipewire-audio.micvolume",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.13.0",
+      "current_state": 0,
+      "settings": {
+        "customName": "",
+        "direction": "mute",
+        "showBar": false,
+        "showName": false,
+        "showPercent": true,
+        "volumeStep": 5
+      },
+      "states": [
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 100,
+          "name": "Unmuted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        },
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "1.svg",
+          "image_scale": 100,
+          "name": "Muted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "opendeck/toggle-action.png",
+        "name": "Toggle Action",
+        "plugin": "opendeck",
+        "property_inspector": "",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "opendeck/toggle-action.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": false,
+        "tooltip": "Cycle through multiple actions",
+        "uuid": "opendeck.toggleaction",
+        "visible_in_action_list": true
+      },
+      "children": [
+        {
+          "action": {
+            "controllers": [
+              "Keypad",
+              "Encoder"
+            ],
+            "disable_automatic_states": false,
+            "encoder": null,
+            "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "name": "Run Command",
+            "plugin": "com.amansprojects.starterpack.sdPlugin",
+            "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+            "states": [
+              {
+                "alignment": "middle",
+                "background_colour": "#000000",
+                "colour": "#FFFFFF",
+                "family": "Liberation Sans",
+                "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+                "image_scale": 100,
+                "name": "",
+                "show": true,
+                "size": 16,
+                "stroke_colour": "#000000",
+                "stroke_size": 3,
+                "style": "Regular",
+                "text": "",
+                "underline": false
+              }
+            ],
+            "supported_in_multi_actions": true,
+            "tooltip": "Run a command",
+            "uuid": "com.amansprojects.starterpack.runcommand",
+            "visible_in_action_list": true
+          },
+          "children": null,
+          "context": "Keypad.14.1",
+          "current_state": 0,
+          "settings": {
+            "down": "/home/niluan/.local/bin/skift-lyd.sh headset",
+            "show": false
+          },
+          "states": [
+            {
+              "alignment": "middle",
+              "background_colour": "#000000",
+              "colour": "#FFFFFF",
+              "family": "Liberation Sans",
+              "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+              "image_scale": 100,
+              "name": "",
+              "show": true,
+              "size": 16,
+              "stroke_colour": "#000000",
+              "stroke_size": 3,
+              "style": "Regular",
+              "text": "",
+              "underline": false
+            }
+          ]
+        },
+        {
+          "action": {
+            "controllers": [
+              "Keypad",
+              "Encoder"
+            ],
+            "disable_automatic_states": false,
+            "encoder": null,
+            "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "name": "Run Command",
+            "plugin": "com.amansprojects.starterpack.sdPlugin",
+            "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+            "states": [
+              {
+                "alignment": "middle",
+                "background_colour": "#000000",
+                "colour": "#FFFFFF",
+                "family": "Liberation Sans",
+                "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+                "image_scale": 100,
+                "name": "",
+                "show": true,
+                "size": 16,
+                "stroke_colour": "#000000",
+                "stroke_size": 3,
+                "style": "Regular",
+                "text": "",
+                "underline": false
+              }
+            ],
+            "supported_in_multi_actions": true,
+            "tooltip": "Run a command",
+            "uuid": "com.amansprojects.starterpack.runcommand",
+            "visible_in_action_list": true
+          },
+          "children": null,
+          "context": "Keypad.14.2",
+          "current_state": 0,
+          "settings": {
+            "down": "/home/niluan/.local/bin/skift-lyd.sh hojtalere",
+            "show": false
+          },
+          "states": [
+            {
+              "alignment": "middle",
+              "background_colour": "#000000",
+              "colour": "#FFFFFF",
+              "family": "Liberation Sans",
+              "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+              "image_scale": 100,
+              "name": "",
+              "show": true,
+              "size": 16,
+              "stroke_colour": "#000000",
+              "stroke_size": 3,
+              "style": "Regular",
+              "text": "",
+              "underline": false
+            }
+          ]
+        }
+      ],
+      "context": "Keypad.14.0",
+      "current_state": 0,
+      "settings": {},
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/hojtalere-tekst.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        },
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/headset-tekst.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/me.amankhanna.oasystem.sdPlugin/icon.png",
+        "name": "RAM",
+        "plugin": "me.amankhanna.oasystem.sdPlugin",
+        "property_inspector": "",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/me.amankhanna.oasystem.sdPlugin/icon.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 14,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "0GB",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Displays RAM utilisation",
+        "uuid": "me.amankhanna.oasystem.ram",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.15.0",
+      "current_state": 0,
+      "settings": {},
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 15,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "4.2GB",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.16.0",
+      "current_state": 0,
+      "settings": {
+        "down": "/home/niluan/.local/bin/lydstyrke.sh master ned",
+        "show": false
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/chevron-ned-roed.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.17.0",
+      "current_state": 0,
+      "settings": {
+        "down": "/home/niluan/.local/bin/lydstyrke.sh OSSink ned",
+        "show": false
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/chevron-ned-roed.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.18.0",
+      "current_state": 0,
+      "settings": {
+        "down": "/home/niluan/.local/bin/lydstyrke.sh MusicSink ned",
+        "show": false
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/chevron-ned-roed.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.19.0",
+      "current_state": 0,
+      "settings": {
+        "down": "/home/niluan/.local/bin/lydstyrke.sh GameSink ned",
+        "show": false
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/chevron-ned-roed.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.20.0",
+      "current_state": 0,
+      "settings": {
+        "down": "/home/niluan/.local/bin/lydstyrke.sh CommsSink ned",
+        "show": false
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/chevron-ned-roed.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.21.0",
+      "current_state": 0,
+      "settings": {
+        "down": "/home/niluan/.local/bin/lydstyrke.sh mic ned",
+        "show": false
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "ikoner/chevron-ned-roed.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "encoder": null,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.31.0",
+      "current_state": 0,
+      "settings": {},
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    }
+  ],
+  "sliders": []
+}
