@@ -98,7 +98,7 @@ Disse kan ikke automatiseres sikkert (afhænger af hardware-model, GUI-interakti
     - **Lydkanaler**: PipeWire Audio Control-knapper til `OSSink`, `MusicSink`, `GameSink`, `CommsSink` og mikrofon.
     - **Skift højtalere/headset** (kræver `addons/audio`): en **Toggle Action** med to **Run Command**-handlinger: `/home/<brugernavn>/.local/bin/skift-lyd.sh headset` (state 1, billede `hojtalere-tekst.png`) og `/home/<brugernavn>/.local/bin/skift-lyd.sh hojtalere` (state 2, billede `headset-tekst.png`).
     - **Op/ned-pile**: **Run Command** med `/home/<brugernavn>/.local/bin/lydstyrke.sh <Kanal> op` / `ned` (Kanal = OSSink, MusicSink, GameSink, CommsSink, master eller mic) og chevron-ikonerne. Audio-pluginnets egne knapper tegner selv deres billede og kan ikke få egne ikoner.
-    - Ikonerne ligger i `~/.config/opendeck/ikoner/` (venstreklik på billedet under *Edit*; vis skjulte mapper med Ctrl+H). De skal ligge inde i `~/.config/opendeck/`, da OpenDeck kun må vise billeder derfra.
+    - Ikonerne lægges automatisk i `~/.config/opendeck/ikoner/` af `setup.sh` – du skal ikke flytte noget. Når du sætter knapperne op i hånden, vælger du bare ikonet derfra (venstreklik på billedet under *Edit*; vis skjulte mapper med Ctrl+H).
 - [ ] **EDIFIER M90**: optisk kabel i **SPDIF OUT** bagpå PC'en, og vælg **optisk** som input (tryk på VOLUME/SOURCE-knappen, fjernbetjeningen eller ConneX-appen). USB-C-kablet skal ikke sidde i.
 - [ ] **Arctis Pro Wireless**: aux-kablet i det **grønne** stik (LINE OUT). Vælg aux/line som input på basestationen, og par headsettet via Bluetooth i KDE (bruges til mikrofonen).
 - [ ] **Print & scan**: tilføj din printer via `print-manager` i systembakken.
