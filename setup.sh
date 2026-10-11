@@ -112,6 +112,13 @@ sudo pacman -S --needed --noconfirm htop mc
 
 echo "== Installerer paru hvis den mangler =="
 if ! command -v paru &> /dev/null; then
+    # Sørg for at rustup er installeret og har en standard toolchain
+    sudo pacman -S --needed --noconfirm rustup
+    rustup default stable
+    
+    # Slet mappen, hvis et tidligere forsøg fejlede
+    rm -rf /tmp/paru
+    
     git clone https://aur.archlinux.org/paru.git /tmp/paru
     cd /tmp/paru && makepkg -si --noconfirm
     cd -
@@ -168,6 +175,9 @@ paru -S --needed --noconfirm orca-slicer-bin
 sudo pacman -S --needed --noconfirm freecad
 
 echo "== Lyd & video =="
+# Fjern jack2 på forhånd for at undgå pakkekonflikt med pipewire-jack
+sudo pacman -Rdd --noconfirm jack2 2>/dev/null || true
+
 sudo pacman -S --needed --noconfirm pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber vlc \
     libdvdread libdvdnav libbluray a52dec faac faad2 x264 x265
 paru -S --needed --noconfirm libdvdcss
