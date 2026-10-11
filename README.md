@@ -11,7 +11,12 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-Scriptet beder om `sudo`-adgangskode undervejs. Kør det fra en frisk CachyOS KDE Plasma-installation.
+Kør det fra en frisk CachyOS KDE Plasma-installation. Forløbet er:
+
+1. **Spørgsmål først** – hvilke addons du vil have (lyd, printer, tastatur/mus) og dit navn/din e-mail til git. Du får en oversigt og bekræfter, før noget installeres.
+2. **`sudo`-adgangskode én gang** – den holdes aktiv resten af kørslen.
+3. **Installation uden opsyn** – resten kører af sig selv.
+4. **Tjekliste** – til sidst vises de manuelle trin, der mangler (tilpasset dine valg). Den gemmes også i `~/SETUP-TJEKLISTE.md`.
 
 ## Mappestruktur
 
@@ -27,10 +32,18 @@ cachyos-setup/
 │   ├── scripts/
 │   │   ├── skift-lyd.sh              # Stream Deck-knap: skift højtalere/headset
 │   │   └── lydstyrke.sh              # Stream Deck-knapper: op/ned pr. kanal (0–100 %)
+│   ├── fstab/
+│   │   ├── README.md                 # Sådan gemmes ekstra diske
+│   │   └── fstab-ekstra              # fstab-linjer (fx /mnt/Filer), gemmes før formatering
+│   ├── ufw/
+│   │   ├── README.md                 # Sådan gemmes firewall-regler
+│   │   ├── user.rules                # UFW-regler IPv4 (gemmes før formatering)
+│   │   └── user6.rules               # UFW-regler IPv6
 │   ├── opendeck/
 │   │   ├── README.md                 # Sådan gemmes/gendannes OpenDeck-profilen
 │   │   ├── profiles/                 # OpenDeck-profil (gemmes manuelt før formatering)
-│   │   └── images/                   # Billeder tilhørende profilen
+│   │   ├── images/                   # Billeder tilhørende profilen
+│   │   └── plugins.tar.gz            # PipeWire Audio Control + System Information
 │   ├── streamdeck/
 │   │   └── *.png                     # Ikoner: headset/højtalere + pile i grøn/rød
 │   └── udev/
@@ -50,29 +63,38 @@ cachyos-setup/
 | Kategori | Programmer |
 |---|---|
 | System | multilib aktiveret, git, curl, wget, base-devel, gnupg, paru |
-| Browser | Chromium (native pacman, ikke Flatpak — nødvendigt for Keychron Launcher) |
+| Browser | Helium (hovedbrowser, AUR: `helium-browser-bin` – privatlivsfokuseret Chromium med uBlock Origin) og Chromium (reserve, native pacman, ikke Flatpak — bruges til Keychron Launcher) |
 | Office & PDF | LibreOffice (Writer/Calc/Impress/**Draw** til PDF-redigering) |
+| Skrifttyper | Microsoft-skrifttyper (`ttf-ms-fonts`: Arial, Times New Roman, Verdana, Courier New m.fl.) + Carlito og Caladea (samme mål som Calibri/Cambria) |
+| Pakkeprogrammer | 7-Zip og unrar (bruges også af KDE's Ark til RAR-filer) |
+| Noter | Obsidian |
 | E-mail | Thunderbird |
 | Print & scan | CUPS, print-manager, system-config-printer, SANE, Simple Scan |
 | Grafik | Krita, FerrumPix (RAW-editor, hentes som AppImage fra GitHub) |
 | Gaming | Steam, Discord |
 | 3D print & CAD | OrcaSlicer, FreeCAD |
 | Lyd & video | PipeWire (+pulse/alsa/jack), WirePlumber, VLC, DVD/codec-pakker |
+| Videoredigering | Kdenlive |
+| Terminalværktøjer | htop, Midnight Commander (mc) |
+| Diske | Monterer ekstra diske fra `configs/fstab/fstab-ekstra` (fx `/mnt/Filer`) |
 | Stream Deck | OpenDeck (styres med **PipeWire Audio Control**-pluginnet + `skift-lyd.sh`) |
 | Musik | Spotify (spotify-launcher) |
-| Udvikling | Visual Studio Code |
-| Sikkerhed | Bitwarden |
+| Udvikling | Visual Studio Code, Git, GitHub CLI (`gh`), Docker + Compose + Buildx, Portainer (Docker-GUI på `https://localhost:9443`) |
+| Sikkerhed | Bitwarden, UFW-firewall (gendanner gemte regler fra `configs/ufw/`) |
 | Fallback | Flatpak + Flathub |
 
 ## Manuelle trin efter kørsel
 
-Disse kan ikke automatiseres sikkert (afhænger af hardware-model, GUI-interaktion eller personligt login) og skal gøres én gang selv:
+Disse kan ikke automatiseres sikkert (afhænger af hardware-model, GUI-interaktion eller personligt login) og skal gøres én gang selv. `setup.sh` viser en kort udgave tilpasset dine valg til sidst og gemmer den i `~/SETUP-TJEKLISTE.md`:
 
-- [ ] **Log ud/ind** (eller genstart), så `input`-gruppen (Stream Deck) og evt. udev-ændringer træder i kraft.
+- [ ] **Log ud og ind igen** (eller genstart), så gruppe-ændringerne (`docker`, `input`) træder i kraft.
+- [ ] **GitHub-login**: `gh auth login` (vælg GitHub.com → HTTPS → login via browser). Derefter virker `git push` uden adgangskode.
+- [ ] **Portainer**: åbn `https://localhost:9443` og opret admin-brugeren **inden for 5 minutter** efter installationen (ellers låser Portainer sig af sikkerhedshensyn – så kør `docker restart portainer` og prøv igen). Browseren advarer om certifikatet første gang; det er forventet. Portainer er kun tilgængelig fra denne PC.
+- [ ] **Docker-containere**: læg compose-filerne tilbage og start dem med `docker compose up -d` i hver mappe – eller opret dem som *Stacks* i Portainer.
 - [ ] **Steam**: tilføj dine øvrige diske som ekstra bibliotek under *Settings → Storage*.
 - [ ] **Spotify**: kør `spotify-launcher` i terminalen første gang for at hente selve klienten.
-- [ ] **OpenDeck – plugins**: installer via *Plugins*-fanen: **PipeWire Audio Control** (lydkanalerne), **System Information** (CPU/RAM), **Essentials for Spotify** og **Home Assistant**. Plugins følger ikke med profilen.
-- [ ] **OpenDeck – profil**: gendannes automatisk af `setup.sh`, hvis den er gemt i `configs/opendeck/` (se `configs/opendeck/README.md`). Start OpenDeck, vælg profilen (fx **Claude**) i dropdown'en under enhedsnavnet, og tjek at knapperne og ikonerne er der. Er profilen ikke gemt, så opsæt knapperne manuelt:
+- [ ] **OpenDeck – plugins**: **PipeWire Audio Control** (lydkanalerne) og **System Information** (CPU/RAM) installeres automatisk af `setup.sh` fra `configs/opendeck/plugins.tar.gz`. Findes arkivet ikke, så installer dem via *Plugins*-fanen.
+- [ ] **OpenDeck – profil**: gendannes automatisk af `setup.sh`, hvis den er gemt i `configs/opendeck/` (se `configs/opendeck/README.md`). Start OpenDeck, vælg profilen **Cachy** i dropdown'en under enhedsnavnet, og tjek at knapperne og ikonerne er der. Er profilen ikke gemt, så opsæt knapperne manuelt:
     - **Lydkanaler**: PipeWire Audio Control-knapper til `OSSink`, `MusicSink`, `GameSink`, `CommsSink` og mikrofon.
     - **Skift højtalere/headset** (kræver `addons/audio`): en **Toggle Action** med to **Run Command**-handlinger: `/home/<brugernavn>/.local/bin/skift-lyd.sh headset` (state 1, billede `hojtalere-tekst.png`) og `/home/<brugernavn>/.local/bin/skift-lyd.sh hojtalere` (state 2, billede `headset-tekst.png`).
     - **Op/ned-pile**: **Run Command** med `/home/<brugernavn>/.local/bin/lydstyrke.sh <Kanal> op` / `ned` (Kanal = OSSink, MusicSink, GameSink, CommsSink, master eller mic) og chevron-ikonerne. Audio-pluginnets egne knapper tegner selv deres billede og kan ikke få egne ikoner.
@@ -94,7 +116,11 @@ Disse kan ikke automatiseres sikkert (afhænger af hardware-model, GUI-interakti
 ## Før formatering
 
 1. Luk OpenDeck helt, og gem profilen i repo'et: `cp -r ~/.config/opendeck/profiles ~/.config/opendeck/images configs/opendeck/`
-2. Commit og push repo'et.
+2. Gem plugins: `tar -czf configs/opendeck/plugins.tar.gz -C ~/.config/opendeck/plugins com.sfgrimes.pipewire-audio.sdPlugin me.amankhanna.oasystem.sdPlugin`
+3. Gem ekstra diske: `grep "/mnt/Filer" /etc/fstab > configs/fstab/fstab-ekstra`
+4. Gem firewall-regler: `sudo cp /etc/ufw/user.rules /etc/ufw/user6.rules configs/ufw/ && sudo chown "$USER": configs/ufw/*.rules`
+5. Sørg for backup af Docker compose-filer og container-data (ligger de på `/mnt/Filer`, bevares de).
+6. Commit og push repo'et.
 
 ## Lydkanaler (PipeWire)
 
@@ -136,10 +162,11 @@ Addon'et slår også ALSA-kontrollen `IEC958` til og gemmer den med `alsactl sto
 Alt der er **hardware-specifikt eller personligt** (printere, tastatur/mus m.m.) ligger **uden for** `setup.sh` som selvstændige scripts i undermapper til `addons/`. Det gør det nemt at tilføje, redigere eller fjerne enkeltdele uden at røre hovedscriptet.
 
 **Sådan fungerer det:**
-- `setup.sh` bruger én genbrugelig funktion (`run_addon_menu`) til at scanne en addon-mappe for `.sh`-filer.
-- Er der **ingen filer**, springes trinnet automatisk over.
+- I starten af `setup.sh` scanner funktionen `choose_addon` hver addon-mappe for `.sh`-filer og spørger, om du vil have den kategori.
+- Er der **ingen filer**, springes kategorien over uden spørgsmål.
 - Er der **én fil**, spørges du kun om du vil installere den.
 - Er der **flere filer**, får du en nummereret liste at vælge fra.
+- Dine valg gemmes, og `run_addon` kører dem senere på det rette sted i installationen.
 
 **Nuværende addon-kategorier:**
 
@@ -150,7 +177,7 @@ Alt der er **hardware-specifikt eller personligt** (printere, tastatur/mus m.m.)
 | `addons/peripherals/` | Tastatur/mus/andre HID-enheder (fx `keychron.sh`) |
 
 **Sådan tilføjer du en ny addon:**
-1. Kopiér en eksisterende fil i den relevante mappe som skabelon (eller opret en ny mappe under `addons/`, hvis det er en helt ny kategori — husk i så fald at tilføje et `run_addon_menu`-kald for den i `setup.sh`).
+1. Kopiér en eksisterende fil i den relevante mappe som skabelon (eller opret en ny mappe under `addons/`, hvis det er en helt ny kategori — husk i så fald at tilføje et `choose_addon`-spørgsmål i starten af `setup.sh` og et `run_addon`-kald, hvor den skal køre).
 2. Giv den nye fil et beskrivende navn — navnet uden `.sh` er det, der vises i menuen.
 3. Tilpas indholdet (pakkenavne, IP-adresser, udev-regler osv.) til den nye enhed.
 
