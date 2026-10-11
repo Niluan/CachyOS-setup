@@ -153,7 +153,7 @@ run_addon "$ADDON_PRINTERS"
 
 echo "== Grafik & billedredigering =="
 sudo pacman -S --needed --noconfirm krita
-sudo pacman -S --needed --noconfirm libmpv libraw
+sudo pacman -S --needed --noconfirm mpv libraw
 mkdir -p ~/Apps/FerrumPix
 curl -L -o ~/Apps/FerrumPix/FerrumPix.AppImage \
   "https://github.com/Bitpainter75/FerrumPix/releases/latest/download/FerrumPix.AppImage"
